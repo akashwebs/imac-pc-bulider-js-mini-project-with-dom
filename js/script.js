@@ -1,9 +1,8 @@
+// common function for id
 const getId = idname => document.getElementById(idname);
 const getTextValue = idName => {
     return parseFloat(getId(idName).innerText);
 }
-
-
 
 const onClick = (btnId, showId, price) => getId(btnId).addEventListener('click', () => {
     getId(showId).innerText = price;
@@ -24,7 +23,6 @@ getId('apply-btn').addEventListener('click', () => {
     const offerPromo = "fake";
     if (promo == offerPromo) {
         const percent = (getTextValue('total-price') - (getTextValue('total-price') * .2)).toFixed(2);
-
         getId('total-price').innerText = percent
     }
 })
