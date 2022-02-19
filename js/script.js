@@ -27,4 +27,5 @@ getId('apply-btn').addEventListener('click', () => {
         const percent = (getTextValue('total-price') - (getTextValue('total-price') * .2)).toFixed(2);
         getId('total-price').innerText = percent
     }
+    getId('promo-input').value = '';
 })
