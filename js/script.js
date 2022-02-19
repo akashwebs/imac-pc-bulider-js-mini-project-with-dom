@@ -1,9 +1,10 @@
 // common function for id
 const getId = idname => document.getElementById(idname);
+// common functon for get text value with parseFloat
 const getTextValue = idName => {
-    return parseFloat(getId(idName).innerText);
-}
-
+        return parseFloat(getId(idName).innerText);
+    }
+    // get button price and set in the calculation box and total all
 const onClick = (btnId, showId, price) => getId(btnId).addEventListener('click', () => {
     getId(showId).innerText = price;
     const bestPrice = getTextValue('best-price') + getTextValue('memory-cost') + getTextValue('storage-cost') + getTextValue('delivery-cost');
@@ -18,6 +19,7 @@ onClick('ssd3', 'storage-cost', 5050)
 onClick('free-delivery', 'delivery-cost', 0)
 onClick('paid-delivery', 'delivery-cost', 120)
 
+// cuppon
 getId('apply-btn').addEventListener('click', () => {
     const promo = getId('promo-input').value;
     const offerPromo = "fake";
